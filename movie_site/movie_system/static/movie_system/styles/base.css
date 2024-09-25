@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "SUSE", sans-serif;
+    margin: 3rem auto;
+    background: #FFFDF2;
+
+}
+
+.nav-bar-list {
+
+    list-style-type: none;
+    margin: 1rem auto;
+    padding: 0;
+    overflow: hidden;
+
+
+}
+
+.nav-bar {
+    width: 20%;
+    float: left;
+    color: #FFFDF2;
+    background-color: #000000;
+}
+
+.nav-bar a {
+    display: block;
+    color: #FFFDF2;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    background-color: #FFFDF2;
+    color:#000000
+}
+
+div {
+    color: #FFFDF2;
+}
+/*
+div a {
+    display: block;
+    max-width: 40rem;
+    color: #FFFDF2;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    margin: 3rem auto;
+} */
+
+
+
+#main-header {
+    width: 100%;
+    text-align: center;
+    }
+
+#main-header-logo {
+    font-size: 3rem;
+    text-decoration: none;
+    color: #000000
+}
+
+#main-header-logo a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#main-header-logo a:hover {
+    color: #000000;
+}

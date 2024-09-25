@@ -1,0 +1,28 @@
+.comments{
+    max-width: 55rem;
+    background-color: #000000;
+    color: #FFFDF2;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    margin: 3rem auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.comments ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comments li {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+}
+
+.comments li:last-of-type {
+    border-bottom: none;
+}
+
+.comments h2 {
+    color: #e6dbb3;
+}

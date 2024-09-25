@@ -1,0 +1,26 @@
+<li class="movie-item">
+    <article>
+        <a href="/{{slug}}">
+        <div class="movie-summary">
+            <div class="movie-image">
+                <img src="{{ image }}" alt="{{ title }}">
+            </div>
+            <div>
+                <h2> {{title}} </h2>
+                <p>
+                    {% for directors in director.all %}
+                        {{directors.name}}
+                    {% endfor %}
+                </p>
+                <p> Director: {{director.all.name}} </p>
+                <p> Release date: {{release_date}} </p>
+                <p> Duration: {{duration}}</p>
+                <p> Genre: {{genre}}</p>
+                <p> Rating: {{rating}} </p>
+            </div>
+        </div>
+        </a>
+        <div>
+        </div>
+    </article>
+</li>

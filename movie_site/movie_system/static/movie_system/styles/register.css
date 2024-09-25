@@ -1,0 +1,42 @@
+.register_form {
+  max-width: 50rem;
+  margin: 3rem auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  background-color: #000000;
+  border-radius: 20px;
+  color: #FFFDF2;
+}
+
+.submit_btn {
+    font-family: "SUSE", sans-serif;
+    margin: 1rem auto;
+    padding: 0.5rem 2rem;
+    background-color: #FFFDF2;
+    border: #FFFDF2;
+    border-radius: 5px;}
+
+.submit_btn:hover,
+.submit_btn:active {
+    background-color: #e6e4dc;
+}
+
+.submit_btn_a {
+    font-family: "SUSE", sans-serif;
+    font-size: 0.8rem;
+    margin: 1rem auto;
+    padding: 0.5rem 2rem;
+    background-color: #FFFDF2;
+    border: #FFFDF2;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000000;}
+
+
+.submit_btn_a a:visited,
+.submit_btn_a a:active,
+.submit_btn_a a:hover{
+    text-decoration: none;
+    color: #000000;
+
+}

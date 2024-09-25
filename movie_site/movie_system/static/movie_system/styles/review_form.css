@@ -1,0 +1,24 @@
+.form_control{
+    max-width: 50rem;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #000000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    color: #FFFDF2;
+    border-radius: 20px;
+    }
+
+.form_control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form_control input,
+.form_control textarea{
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    font: inherit;
+    padding:0.25rem;
+}

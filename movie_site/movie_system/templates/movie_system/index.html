@@ -1,0 +1,42 @@
+{% extends 'movie_system/base/base.html' %}
+
+{% load static %}
+
+{% block title %}Home page{% endblock %}
+{% block style_css %}
+    <link rel="stylesheet" href="{% static 'movie_system/styles/all_movies.css' %}">
+    <link rel="stylesheet" href="{% static 'movie_system/styles/review_form.css' %}">
+    <link rel="stylesheet" href="{% static 'movie_system/styles/register.css' %}">
+{% endblock %}
+
+{% block main_heading %}
+    <h1>Welcome to movie reviewing page!</h1>
+{% endblock %}
+{% block header_content %}
+    <p>I hope you find somethig interesting for you!<br>Just log in and add your favorite movies to your library!</p>
+{% endblock %}
+
+{% block body %}
+<section>
+    <a href="?sort=title" {% if sort_by == 'title' %}class="active"{% endif %}>Sort by Name</a> |
+    <a href="?sort=-title" {% if sort_by == '-title' %}class="active"{% endif %}>Sort by Name (Desc)</a> |
+    <a href="?sort=release_date" {% if sort_by == 'release_date' %}class="active"{% endif %}>Sort by Release date</a> |
+    <a href="?sort=-release_date" {% if sort_by == '-release_date' %}class="active"{% endif %}>Sort by Release date (Desc)</a> |
+    <a href="?sort=director" {% if sort_by == 'director' %}class="active"{% endif %}>Sort by Director</a> |
+    <a href="?sort=-director" {% if sort_by == '-director' %}class="active"{% endif %}>Sort by Director (Desc)</a>
+</section>
+
+<section class="form_control">
+        <form action="{% url 'home' %}" method="get">
+        {{ filter.as_p }}
+        <button class="submit_btn">Submit</button>
+    </form>
+    </section>
+<section>
+        <ol>
+            {% for movie in movies %}
+                {% include 'movie_system/includes/movie-item.html' with title=movie.title director=movie.director.all image=movie.poster_image.url release_date=movie.release_date duration=movie.duration|cut:":00" genre=movie.genre rating=movie.rating slug=movie.slug %}
+            {% endfor %}
+        </ol>
+</section>
+{% endblock %}

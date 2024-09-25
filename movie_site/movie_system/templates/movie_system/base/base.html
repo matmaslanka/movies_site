@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'movie_system/icon/watching-a-movie.png' %}">
+    <link rel="stylesheet" href="{% static 'movie_system/styles/base.css' %}">
+    {% block style_css %}{% endblock %}
+</head>
+
+<body>
+Log In as: {{user}}
+<header id="main-header">
+    <nav id="main-header-logo"><a href="" id="main-logo">Movie reviewing site</a></nav>
+    <ul class="nav-bar-list">
+        <li class="nav-bar"><a href="{% url 'home' %}">Home </a></li>
+        <li class="nav-bar"><a href="{% url 'add-movie' %}"> Add movie</a></li>
+        {% if not user.username %}
+            <li class="nav-bar"><a href="{% url 'login' %}">Login</a></li>
+        {% else %}
+            <li class="nav-bar"><a href="{% url 'logout' %}">Logout</a></li>
+        {% endif %}
+        <li class="nav-bar"><a href="{% url 'register' %}">Register</a></li>
+        <li class="nav-bar"><a href="">About</a></li>
+    </ul>
+    {% block main_heading %} {% endblock %}
+    {% block header_content %} {% endblock %}
+</header>
+
+<main>
+    {% block body %} {% endblock %}
+</main>
+</body>
+</html>
